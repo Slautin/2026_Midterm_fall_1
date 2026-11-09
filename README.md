@@ -1,19 +1,7 @@
-# student (public)
-
-What students receive:
-
 - `spectrum_client.py`: the client for the server, in one file (needs only numpy and requests).
 - `spectrum_sim/`: the server's own simulator, to train offline. It is copied from the server repository; do not edit it here.
 - `starter.ipynb`: a Colab-ready notebook built around a **surrogate** (data so far → estimate of the spectrum) and a **policy** (state → next stage of queries) joined by a loop. It has worked examples (a smoother, a peak fit, a two-stage policy), an offline comparison on the simulator, and the final test cell. It uses scipy and matplotlib, which Colab already has; elsewhere install them too.
 
-Contains no keys and no server code. The hidden test spectra come from secret keys that are not in the simulator.
-
-## Teacher: before handing it out
-
-1. The server is deployed; its address is already in `starter.ipynb`.
-2. The `%pip install` line in `starter.ipynb` points to `https://github.com/Slautin/2026_Midterm_fall_1.git`. Keep this folder published there as a public repository so students can `pip install` it from Colab. If you set a class code on the server, add `class_code="..."` to the `run_test` call.
-3. Tell students to open the notebook in Colab, replace `my_surrogate` and `my_policy` (they start as the baseline, so an unchanged notebook scores about 1.0), run **Restart and run all**, and hand in the notebook. The worked examples in sections 3 and 4 score about 0.64 and 0.55, so a student who copies them already beats the baseline. The last cell prints their table and a `SUBMISSION` line you can verify with `server/scripts/check_notebooks.py`.
-4. After changing the generator, noise, scoring or session code in the server repository, run `server/scripts/sync_sim.py` so `spectrum_sim/` matches again.
 
 ## Students: the interface in one minute
 
