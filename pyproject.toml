@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spectrum-client"
+version = "0.1.0"
+description = "Client for the spectrum sampling midterm server"
+requires-python = ">=3.10"
+dependencies = ["numpy", "requests"]
+
+[tool.setuptools]
+py-modules = ["spectrum_client"]
+packages = ["spectrum_sim"]
